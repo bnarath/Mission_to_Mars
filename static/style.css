@@ -1,0 +1,15 @@
+.hv {
+    height: 100vh;
+}
+
+.bg-image{
+    height: 100%;
+    position: relative;
+    /*background-image: url("https://source.unsplash.com/random");*/
+    background-image: url("service_unavailable_background.jpg");
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0px;
+}

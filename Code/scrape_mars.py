@@ -1,3 +1,5 @@
+# scrape_mars.py
+
 ## Dependencies
 
 import requests
@@ -10,7 +12,10 @@ import threading
 #In Python 3.2+, stdlib concurrent.futures module provides a higher level API to threading, 
 # including passing return values or exceptions from a worker thread back to the main thread:
 import concurrent.futures
-from urls_list import * #where all urls and paths are saved
+try:
+    from urls_list import * #where all urls and paths are saved
+except:
+    from Code.urls_list import *
 
 
 def scrape_latest_news(st):
