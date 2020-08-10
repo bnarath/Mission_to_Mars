@@ -6,6 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Mission To Mars</title>
+        <!--Bootstrap requires JQuery, Popper.JS and JS plugins-->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+ 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- Customized CSS Link -->
@@ -17,7 +22,7 @@
         <div class="container-fluid px-0">
           <div class="jumbotron text-center">
             <h1 class="display-4">Mission To Mars</h1>
-            <p><a class="btn btn-info btn-xs py-1" href="/scrape" role="button">Scrape New Data</a></p>
+            <p><a id="scrape-btn" class="btn btn-info btn-xs py-1" href="/scrape" role="button" onclick="if (!this.clicked){this.clicked = true; setTimeout('document.getElementById(scrape-btn).clicked = false;' , 60000); return true;} return false">Scrape New Data</a></p>
           </div>
         </div>
         <div class="container-fluid">
@@ -72,7 +77,7 @@
             </div>
           </div>
         </div>
-        
+
       </body>
 
 </html>
