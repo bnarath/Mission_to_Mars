@@ -21,8 +21,10 @@ def catch_all(path):
         #This route captures scrape path
         #scrape the data
         scraped_dict = sm.scrape()
+        #Convert table to html
+        scraped_dict['scrape_mars_facts_data'] = scraped_dict['scrape_mars_facts_data'].to_html(index=False, classes="mars-table table table-sm text-xsmall table-bordered table-hover table-condensed", header="true")
         #Update the mars_data collection with the scraped data
-        mongo.db.mars_data.update({}, {'$set': scraped_dict}, upsert=True)
+        mongo.db.mars_data.update_one({}, {'$set': scraped_dict}, upsert=True)
         return redirect('/', 302)
     else:
         return render_template("default.html"), 404

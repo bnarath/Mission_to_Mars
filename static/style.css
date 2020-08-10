@@ -13,3 +13,53 @@
     background-size: cover;
     margin-top: 0px;
 }
+
+.fit-image{
+    width: 100%;
+    object-fit: cover;
+}
+
+.extra-130 {
+    font-size: 130%;
+}
+
+.mars-table {
+    font-family: Arial;
+    border-collapse: collapse; 
+    border: 1px solid silver;
+
+}
+
+.mars-table td, th {
+    padding: 5px;
+    text-align: left; 
+    vertical-align: middle;
+}
+
+.mars-table tr:nth-child(even) {
+    background: #E0E0E0;
+}
+
+.mars-table tr:hover {
+    background: silver;
+    cursor: pointer;
+}
+
+@media all {
+    .showme {
+        display:none;
+    }
+
+}
+@media all and (min-width: 992px) and (max-width: 1100px) {
+    .showme {
+        display:block;
+        font-size: 18px;
+        font-family: 'Margarine', cursive;
+        font-style: italic;
+        text-justify: center;
+        line-height: 400%;
+        color: teal;
+    }
+
+}

@@ -88,7 +88,7 @@ def scrape_mars_weather(st):
 
 def scrape_mars_facts(st):
     DF = pd.read_html(mars_facts, attrs={'id':'tablepress-p-mars'})[0]
-    DF.rename(columns={0:'attributes', 1:'value'}, inplace=True)
+    DF.rename(columns={0:'', 1:'value'}, inplace=True)
     return DF
 
 def scrape_hemispheres(st):  
