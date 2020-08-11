@@ -112,7 +112,6 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
     <p align="center">
        <img src="Images/findme.png" alt="findme"/>
     </p>
-      <p align="center"><b>SQL Alchemy Architecture</b><p align="center">
    </div>
   
    
