@@ -1,0 +1,8 @@
+nasa_mars_news = 'https://mars.nasa.gov/news/'
+nasa_jpl = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
+mars_twitter_page = 'https://twitter.com/marswxreport?lang=en'
+mars_facts = 'https://space-facts.com/mars/'
+usgs_base='https://astrogeology.usgs.gov/'
+usgs_search='https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars'
+executable_path = '/usr/local/bin/chromedriver'
+browser_choice = 'chrome'

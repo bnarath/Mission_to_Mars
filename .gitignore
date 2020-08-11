@@ -1,5 +1,8 @@
 #Custom
 config.py
+extra_code
+mission_to_mars_selenium_version.ipynb
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
