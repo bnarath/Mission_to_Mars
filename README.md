@@ -9,7 +9,7 @@ This project is to build a web application that scrapes various websites for dat
 
 Initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter.
 
-- Codebase is [here](Analysis_Code/mission_to_mars_selenium_version.ipynb)
+- Codebase is [here](Analysis_Code/mission_to_mars.ipynb)
 - All the urls used in the code are kept in [urls_list.py](Analysis_Code/urls_list.py)
 
 **The following data is scraped and retrieved in the format mentioned below**
