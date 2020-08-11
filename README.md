@@ -38,7 +38,7 @@ featured_image_url = 'https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA1
 
 ### Mars Weather
 
-* Mars Weather information is retrieved from twitter account [here](https://twitter.com/marswxreport?lang=en) and scrape the latest Mars weather tweet from the page.
+* Mars Weather information is retrieved from twitter account [here](https://twitter.com/marswxreport?lang=en) and scraped the latest Mars weather tweet from the page.
 
 ```python
 # Example:
@@ -48,7 +48,7 @@ mars_weather = 'Sol 1801 (Aug 30, 2017), Sunny, high -21C/-5F, low -80C/-112F, p
 ### Mars Facts
 
 * Mars Facts are located [here](https://space-facts.com/mars/).
-* Used Pandas to retrieve the html table as dataframe and to convert the data to a HTML table string.
+* Used Pandas to retrieve the html table as dataframe and also to convert the data to a HTML table string.
 
 ### Mars Hemispheres
 
