@@ -12,7 +12,7 @@ Initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Spl
 - Codebase is [here](Analysis_Code/mission_to_mars.ipynb)
 - All the urls used in the code are kept in [urls_list.py](Analysis_Code/urls_list.py)
 
-**The following data is scraped and retrieved in the format mentioned below**
+**The following data is scraped and retrieved in the format mentioned below.**
 
 ### NASA Mars News
 
