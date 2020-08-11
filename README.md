@@ -5,6 +5,9 @@
 This project is to build a web application that scrapes various websites for data related to the **Mission to Mars** and displays the information in a single HTML page. 
 
 
+**Application is deployed as a Heroku app [https://missionmars.herokuapp.com/](https://missionmars.herokuapp.com/). Due to the limitation of the free version, performance is not as good as it is hosted locally. Also, some necessary changes are done for the sake of compatibility with chrome drivers in the Heroku dynos!**
+
+
 ## Step 1 - Scraping
 
 Initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter.
@@ -70,45 +73,40 @@ hemisphere_image_urls = [
 
 ## Step 2 - MongoDB and Flask Application
 
-Codebase is [here](Analysis_Code/mission_to_mars_selenium_version.ipynb)
-All the urls used in the code are kept in [urls_list.py](Analysis_Code/urls_list.py)
+- Scrape Codebase is [here](Code/scrape_mars.py)
+- Flask app is [here](app.py)
+- All the urls used in the code are kept in [urls_list.py](Code/urls_list.py)
+- Please note that a config file needs to be created as `config.py` which contains `mongo_uri`. In my case, I have used [Free Mongo Cloud](https://www.mongodb.com/cloud), hence didn't keep the config file here to secure the password. **When you use a new DB, please ensure to click scrape button first**
 
 
-Used MongoDB with Flask templating to create a new HTML page that displays all of the information that was scraped from the URLs above.
+Use MongoDB with Flask templating to create a new HTML page that displays all of the information that was scraped from the URLs above.
 
-* Start by converting your Jupyter notebook into a Python script called `scrape_mars.py` with a function called `scrape` that will execute all of your scraping code from above and return one Python dictionary containing all of the scraped data.
+* A Consolidated code file is created  [`scrape_mars.py`](Code/scrape_mars.py) with a function called `scrape` that will execute all of the scraping code from above and return one Python dictionary containing all of the scraped data.
 
-* Next, create a route called `/scrape` that will import your `scrape_mars.py` script and call your `scrape` function.
+  - I have used some useful features in this script.
+   - **`Multi threading`: To scrape simultaneously.**
+   - **`Retry function`: As sometimes error occurs because of the webpages do not load fast. This function reties the scraping with extended wait times.**
 
-  * Store the return value in Mongo as a Python dictionary.
+* Next, create a flask app.
+
+  - I have used `catch all` route to define the routes. This is to ensure there is a default route.
 
 * Create a root route `/` that will query your Mongo database and pass the mars data into an HTML template to display the data.
 
-* Create a template HTML file called `index.html` that will take the mars data dictionary and display all of the data in the appropriate HTML elements. Use the following as a guide for what the final product should look like, but feel free to create your own design.
+* Create a template HTML file called [`index.html`](templates/index.html) that will take the mars data dictionary and display all of the data in the appropriate HTML elements. 
+ - I have added a small `JS functionality` to scrape button (To disable it for 30 sec once it gets clicked. This is to avoid user clicking it continuously.)
 
-![final_app_part1.png](Images/final_app_part1.png)
-![final_app_part2.png](Images/final_app_part2.png)
+* Create a default page [`default.html`](templates/default.html) (when user tries to access some random url, this page should pop up)
 
+  Final Application looks like this!
+    ![final_app_part1](Images/final_app_part1.png)
+    ![final_app_part2](Images/final_app_part2.png)
+    ![final_app_part3](Images/final_app_part3.png)
+    ![final_app_part4](Images/final_app_part4.png)
+    ![final_app_default_page](Images/final_app_part5.png)
+    
+   **``I have made this app responsive, using Bootstrap. The pictures above are when the app is in larger screens. I between two specific screen sizes, the app would display the below quote. I will let you explore that yourself by playing around the screen sizes!!!``**
+   ![find me](Images/findme.png)
+   
+    
 - - -
-
-## Step 3 - Submission
-
-To submit your work to BootCampSpot, create a new GitHub repository and upload the following:
-
-1. The Jupyter Notebook containing the scraping code used.
-
-2. Screenshots of your final application.
-
-3. Submit the link to your new repository to BootCampSpot.
-
-## Hints
-
-* Use Splinter to navigate the sites when needed and BeautifulSoup to help find and parse out the necessary data.
-
-* Use Pymongo for CRUD applications for your database. For this homework, you can simply overwrite the existing document each time the `/scrape` url is visited and new data is obtained.
-
-* Use Bootstrap to structure your HTML template.
-
-### Copyright
-
-Trilogy Education Services © 2019. All Rights Reserved.
