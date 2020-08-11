@@ -2,18 +2,21 @@
 
 ![mission_to_mars](Images/mission_to_mars.png)
 
-Here we build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The following outlines what you need to do.
+This project is to build a web application that scrapes various websites for data related to the **Mission to Mars** and displays the information in a single HTML page. 
 
 
 ## Step 1 - Scraping
 
-Complete your initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter.
+Initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter.
 
-* Create a Jupyter Notebook file called `mission_to_mars.ipynb` and use this to complete all of your scraping and analysis tasks. The following outlines what you need to scrape.
+Codebase is [here](Analysis_Code/mission_to_mars_selenium_version.ipynb)
+All the urls used in the code are kept in [urls_list.py](Analysis_Code/urls_list.py)
+
+**The following data is scraped and retrieved in the format mentioned below**
 
 ### NASA Mars News
 
-* Scrape the [NASA Mars News Site](https://mars.nasa.gov/news/) and collect the latest News Title and Paragraph Text. Assign the text to variables that you can reference later.
+* Scraped the [NASA Mars News Site](https://mars.nasa.gov/news/) and collected the latest News Title and Paragraph Text. 
 
 ```python
 # Example:
@@ -24,13 +27,9 @@ news_p = "Preparation of NASA's next spacecraft to Mars, InSight, has ramped up 
 
 ### JPL Mars Space Images - Featured Image
 
-* Visit the url for JPL Featured Space Image [here](https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars).
+* JPL Featured Space Image is loacted [here](https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars).
 
-* Use splinter to navigate the site and find the image url for the current Featured Mars Image and assign the url string to a variable called `featured_image_url`.
-
-* Make sure to find the image url to the full size `.jpg` image.
-
-* Make sure to save a complete url string for this image.
+* Used splinter to navigate and find the image url for the current Featured Mars Image and retrieved full size image.
 
 ```python
 # Example:
@@ -39,10 +38,7 @@ featured_image_url = 'https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA1
 
 ### Mars Weather
 
-* Visit the Mars Weather twitter account [here](https://twitter.com/marswxreport?lang=en) and scrape the latest Mars weather tweet from the page. Save the tweet text for the weather report as a variable called `mars_weather`.
-* **Note: Be sure you are not signed in to twitter, or scraping may become more difficult.**
-* **Note: Twitter frequently changes how information is presented on their website. If you are having difficulty getting the correct html tag data, consider researching Regular Expression Patterns and how they can be used in combination with the .find() method.**
-
+* Mars Weather information is retrieved from twitter account [here](https://twitter.com/marswxreport?lang=en) and scrape the latest Mars weather tweet from the page.
 
 ```python
 # Example:
@@ -51,19 +47,14 @@ mars_weather = 'Sol 1801 (Aug 30, 2017), Sunny, high -21C/-5F, low -80C/-112F, p
 
 ### Mars Facts
 
-* Visit the Mars Facts webpage [here](https://space-facts.com/mars/) and use Pandas to scrape the table containing facts about the planet including Diameter, Mass, etc.
-
-* Use Pandas to convert the data to a HTML table string.
+* Mars Facts are located [here](https://space-facts.com/mars/).
+* Used Pandas to retrieve the html table as dataframe and to convert the data to a HTML table string.
 
 ### Mars Hemispheres
 
-* Visit the USGS Astrogeology site [here](https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars) to obtain high resolution images for each of Mar's hemispheres.
+* Used USGS Astrogeology site [here](https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars) to obtain high resolution images for each of Mar's hemispheres and retrieved the full resolution images.
 
-* You will need to click each of the links to the hemispheres in order to find the image url to the full resolution image.
-
-* Save both the image url string for the full resolution hemisphere image, and the Hemisphere title containing the hemisphere name. Use a Python dictionary to store the data using the keys `img_url` and `title`.
-
-* Append the dictionary with the image url string and the hemisphere title to a list. This list will contain one dictionary for each hemisphere.
+* Appended the dictionary with the image url string and the hemisphere titles to a list. This list contains one dictionary for each hemisphere.
 
 ```python
 # Example:
@@ -79,7 +70,11 @@ hemisphere_image_urls = [
 
 ## Step 2 - MongoDB and Flask Application
 
-Use MongoDB with Flask templating to create a new HTML page that displays all of the information that was scraped from the URLs above.
+Codebase is [here](Analysis_Code/mission_to_mars_selenium_version.ipynb)
+All the urls used in the code are kept in [urls_list.py](Analysis_Code/urls_list.py)
+
+
+Used MongoDB with Flask templating to create a new HTML page that displays all of the information that was scraped from the URLs above.
 
 * Start by converting your Jupyter notebook into a Python script called `scrape_mars.py` with a function called `scrape` that will execute all of your scraping code from above and return one Python dictionary containing all of the scraped data.
 
