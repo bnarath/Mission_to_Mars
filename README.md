@@ -99,9 +99,14 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
 * Create a default page [`default.html`](templates/default.html) (when user tries to access some random url, this page should pop up)
 
   Final Application looks like this!
-    ![final_app_part1_before_scraping](Images/final_app_part1.png)
-    ![final_app_part2_before_scraping](Images/final_app_part2.png)
-    ![final_app_part1_after_scraping](Images/final_app_part3.png)
-    ![final_app_part2_after_scraping](Images/final_app_part4.png)
+    ![final_app_part1](Images/final_app_part1.png)
+    ![final_app_part2](Images/final_app_part2.png)
+    ![final_app_part3](Images/final_app_part3.png)
+    ![final_app_part4](Images/final_app_part4.png)
     ![final_app_default_page](Images/final_app_part5.png)
+    
+   **``I have made this app responsive, using Bootstrap. The pictures above are when the app is in larger screens. I between two specific screen sizes, the app would display the below quote. I will let you explore that yourself by playing around the screen sizes!!!``**
+   ![find me](Images/findme.png)
+   
+    
 - - -
