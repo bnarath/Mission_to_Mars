@@ -108,12 +108,8 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
         <p align="center">Default page looks as below!</p>
         <img align="right" src="Images/default_page.png" alt="Application_default_page"/> 
     </div>  
-   
- </p>   
- 
 
- 
- <p>
+    <br>
  
     <div style="width:80;float:left">
         <p align="center">Find me!</p>
