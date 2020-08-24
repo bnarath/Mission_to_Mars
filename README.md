@@ -104,11 +104,12 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
 
 * Create a default page [`default.html`](templates/default.html) (when user tries to access some random url, this page should pop up)
    
-    <div style="width:100;float:right">
+    <div style="width:100;float:none">
         <p align="center">Default page looks as below!</p>
         <img align="right" src="Images/default_page.png" alt="Application_default_page"/> 
     </div>  
 
+    <br>
     <br>
  
     <div style="width:80;float:left">
