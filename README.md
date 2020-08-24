@@ -89,17 +89,17 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
 * A Consolidated code file is created  [`scrape_mars.py`](Code/scrape_mars.py) with a function called `scrape` that will execute all of the scraping code from above and return one Python dictionary containing all of the scraped data.
 
   * I have used some useful features in this script.
-   * **`Multi threading`: To scrape simultaneously.**
-   * **`Retry function`: As sometimes error occurs because of the webpages do not load fast. This function retries the scraping with extended wait times.**
+    -  **`Multi threading`: To scrape simultaneously.**
+    -  **`Retry function`: As sometimes error occurs because of the webpages do not load fast. This function retries the scraping with extended wait times.**
 
 * Next, create a flask app.
 
-  - I have used `catch all` route to define the routes. This is to ensure there is a default route.
+  - I have used **`catch all`** route to define the routes. This is to ensure there is a default route.
 
 * Create a root route `/` that will query your Mongo database and pass the mars data into an HTML template to display the data.
 
 * Create a template HTML file called [`index.html`](templates/index.html) that will take the mars data dictionary and display all of the data in the appropriate HTML elements. 
- - I have added a small `JS functionality` to scrape button (To disable it for 30 sec once it gets clicked. This is to avoid user clicking it continuously.)
+  - I have added a small **`JS functionality`** to scrape button (To disable it for 30 sec once it gets clicked. This is to avoid user clicking it continuously.)
 
 
 * Create a default page [`default.html`](templates/default.html) (when user tries to access some random url, this page should pop up)
