@@ -85,7 +85,7 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
 
   - I have used some useful features in this script.
    - **`Multi threading`: To scrape simultaneously.**
-   - **`Retry function`: As sometimes error occurs because of the webpages do not load fast. This function reties the scraping with extended wait times.**
+   - **`Retry function`: As sometimes error occurs because of the webpages do not load fast. This function retries the scraping with extended wait times.**
 
 * Next, create a flask app.
 
