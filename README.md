@@ -79,9 +79,9 @@ hemisphere_image_urls = [
 - Please note that a config file needs to be created as `config.py` which contains `mongo_uri`. In my case, I have used [Free Mongo Cloud](https://www.mongodb.com/cloud), hence didn't keep the config file here to secure the password. **When you use a new DB, please ensure to click scrape button first**
 
 <p>
-    <div style="width:80%;float:right">
+    <div style="width:100;float:right">
         <p align="center">Final application looks as below!</p>
-        <img align="right" src="Images/full_page.png" alt="Application_full_page" align="center" style="width:100"/> 
+        <img align="right" src="Images/full_page.png" alt="Application_full_page"> 
     </div>
 
 Use MongoDB with Flask templating to create a new HTML page that displays all of the information that was scraped from the URLs above.
@@ -100,18 +100,22 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
 
 * Create a template HTML file called [`index.html`](templates/index.html) that will take the mars data dictionary and display all of the data in the appropriate HTML elements. 
  - I have added a small `JS functionality` to scrape button (To disable it for 30 sec once it gets clicked. This is to avoid user clicking it continuously.)
-</p>
+
+
 * Create a default page [`default.html`](templates/default.html) (when user tries to access some random url, this page should pop up)
-    
+   
+    <div style="width:50;float:right">
+        <p align="center">Default page looks as below!</p>
+        <img align="right" src="Images/default_page.png" alt="Application_default_page"/> 
+    </div>  
+   
    **``I have made this app responsive, using Bootstrap. The pictures above are when the app is in larger screens. In between two specific screen sizes, the app would display the below quote. I will let you explore that yourself by playing around the screen sizes!!!``**
    
-   
-   <div align="center">
-    <p align="center">
-       <img src="Images/findme.png" alt="findme"/>
-    </p>
-   </div>
+    <div style="width:50;float:left">
+        <p align="center">Find me!</p>
+        <img align="right" src="Images/findme.png" alt="Find Me"/> 
+    </div> 
   
-   
+</p>   
     
 - - -
