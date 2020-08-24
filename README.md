@@ -109,7 +109,10 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
         <img align="right" src="Images/default_page.png" alt="Application_default_page"/> 
     </div>  
    
-   
+ </p>   
+ 
+ - - -
+ <p>
  
     <div style="width:200px;float:left">
         <p align="center">Find me!</p>
@@ -120,8 +123,7 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
 
    **I have made this app responsive, using Bootstrap. The pictures above are when the app is in larger screens. In between two specific screen sizes, the app would display the below quote. I will let you explore that yourself by playing around the screen sizes!!!**
    
-    
+</p>
   
-</p>   
     
 - - -
