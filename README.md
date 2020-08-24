@@ -80,7 +80,10 @@ hemisphere_image_urls = [
 
 <p>
 
-<img align="right" src="Images/full_page.png" style={"float": "right"}/>
+
+<img align="right" src="Images/full_page.png" 
+       style={{float: 'right' }}/>
+
 
 Use MongoDB with Flask templating to create a new HTML page that displays all of the information that was scraped from the URLs above.
 
