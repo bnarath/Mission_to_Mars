@@ -111,8 +111,7 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
    
  </p>   
  
- 
- <br>
+
  
  <p>
  
