@@ -88,9 +88,9 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
 
 * A Consolidated code file is created  [`scrape_mars.py`](Code/scrape_mars.py) with a function called `scrape` that will execute all of the scraping code from above and return one Python dictionary containing all of the scraped data.
 
-  - I have used some useful features in this script.
-   - **`Multi threading`: To scrape simultaneously.**
-   - **`Retry function`: As sometimes error occurs because of the webpages do not load fast. This function retries the scraping with extended wait times.**
+  * I have used some useful features in this script.
+   * **`Multi threading`: To scrape simultaneously.**
+   * **`Retry function`: As sometimes error occurs because of the webpages do not load fast. This function retries the scraping with extended wait times.**
 
 * Next, create a flask app.
 
