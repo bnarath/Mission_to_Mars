@@ -78,9 +78,9 @@ hemisphere_image_urls = [
 - All the urls used in the code are kept in [urls_list.py](Code/urls_list.py)
 - Please note that a config file needs to be created as `config.py` which contains `mongo_uri`. In my case, I have used [Free Mongo Cloud](https://www.mongodb.com/cloud), hence didn't keep the config file here to secure the password. **When you use a new DB, please ensure to click scrape button first**
 
-Final Application looks like this!
-    <img align="right" src="Images/full_page.png" 
-       style={{ width: 100, float: 'right' }}/>
+<p>
+
+<img align="right" src="Images/full_page.png" style={{ width: 100, float: 'right' }}/>
 
 Use MongoDB with Flask templating to create a new HTML page that displays all of the information that was scraped from the URLs above.
 
@@ -98,7 +98,7 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
 
 * Create a template HTML file called [`index.html`](templates/index.html) that will take the mars data dictionary and display all of the data in the appropriate HTML elements. 
  - I have added a small `JS functionality` to scrape button (To disable it for 30 sec once it gets clicked. This is to avoid user clicking it continuously.)
-
+</p>
 * Create a default page [`default.html`](templates/default.html) (when user tries to access some random url, this page should pop up)
     
    **``I have made this app responsive, using Bootstrap. The pictures above are when the app is in larger screens. In between two specific screen sizes, the app would display the below quote. I will let you explore that yourself by playing around the screen sizes!!!``**
