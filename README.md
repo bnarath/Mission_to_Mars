@@ -110,7 +110,6 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
     </div>  
    
    
- - - -
  
     <div style="width:200px;float:left">
         <p align="center">Find me!</p>
