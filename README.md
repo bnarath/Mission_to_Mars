@@ -79,7 +79,7 @@ hemisphere_image_urls = [
 - Please note that a config file needs to be created as `config.py` which contains `mongo_uri`. In my case, I have used [Free Mongo Cloud](https://www.mongodb.com/cloud), hence didn't keep the config file here to secure the password. **When you use a new DB, please ensure to click scrape button first**
 
 <p>
-    <div style="width:80;float:right">
+    <div style="width:80%;float:right">
         <p align="center">Final application looks as below!</p>
         <img align="right" src="Images/full_page.png" alt="Application_full_page" align="center" style="width:100"/> 
     </div>
